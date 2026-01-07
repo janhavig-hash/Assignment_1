@@ -9,11 +9,11 @@
    -Embedding vectors
 
 # The task uses:
--**FastAPI** for REST API 
--**chromaDB** for vector storage
--**Ollama** for embeddings
--**Numpy** for vector math 
+- **FastAPI** for REST API 
+- **chromaDB** for vector storage
+- **Ollama** for embeddings
+- **Numpy** for vector math 
 
----
+
 
 
