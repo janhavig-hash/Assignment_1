@@ -1,0 +1,7 @@
+Chroma is an open-source vector database designed for embeddings.
+Ollama allows running large language models locally on your machine.
+Vector databases store embeddings for semantic similarity search.
+Embeddings transform text into dense numerical representations.
+FastAPI is a modern Python framework for building APIs.
+Python is widely used in AI and backend systems.
+Approximate nearest neighbor indexing enables fast similarity search.
