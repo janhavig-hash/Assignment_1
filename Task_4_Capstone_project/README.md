@@ -34,3 +34,36 @@ tax-assistant-ai/
 ├── requirements.txt    # Project Dependencies
 └── README.md           # Documentation
 
+---
+
+## ⚙️ Installation & Setup
+**Prerequisites:**
+* Python 3.10+
+* [Ollama](https://ollama.com/) installed and running (`ollama pull mistral`)
+
+
+```
+ ### 1) Clone the Repository
+ Extract frames from your short raw video clips.
+
+```bash
+python extract_frames.py \
+  --video_dir "/path/to/raw_videos" \
+  --output_dir "/path/to/dataset/train/images" \
+  --frame_rate 2
+
+```
+ ### 2) Create Virtual Environment
+
+```bash
+python -m venv venv
+# Windows:
+venv\Scripts\activate
+# Mac/Linux:
+source venv/bin/activate
+```
+ ### 3) Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
