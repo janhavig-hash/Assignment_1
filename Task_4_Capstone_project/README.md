@@ -34,5 +34,8 @@ tax-assistant-ai/
 ├── requirements.txt    # Project Dependencies
 └── README.md           # Documentation
 
-
+⚙️ Installation & Setup
+Prerequisites:
+-Python 3.10+
+-Ollama installed and running (ollama pull mistral)
 
