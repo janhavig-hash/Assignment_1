@@ -34,51 +34,28 @@ tax-assistant-ai/
 ├── requirements.txt    # Project Dependencies
 └── README.md           # Documentation
 
-⚙️ Installation & Setup
-Prerequisites:
--Python 3.10+
--Ollama installed and running (ollama pull mistral)
+## ⚙️ Installation & Setup
 
-1. Clone the Repository
+**Prerequisites:**
+* Python 3.10+
+* [Ollama](https://ollama.com/) installed and running (`ollama pull mistral`)
 
+**1. Clone the Repository**
+```bash
+git clone https://github.com/YOUR_USERNAME/tax-assistant-ai.git
+cd tax-assistant-ai
 
-2.Create Virtual Environment
+**2. Create Virtual Environment**
+```bash
 python -m venv venv
 # Windows:
 venv\Scripts\activate
 # Mac/Linux:
 source venv/bin/activate
 
-3.Install Dependencies
+**3. Install Dependencies**
+```bash
 pip install -r requirements.txt
-
-🏃‍♂️ How to Run
-You need to run the Backend and Frontend in two separate terminals.
-
-Terminal 1: Start Backend API
-uvicorn app.main:app --reload
-# API will start at [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
-Terminal 2: Start Frontend UI
-streamlit run frontend.py
-# UI will open at http://localhost:8501
-
-🧪 Running Tests
-This project enforces code quality using Pytest.
-pytest
-
-Generate Coverage Report:
-pytest --cov=app --cov-report=html
-# Open htmlcov/index.html to view the report
-
-📝 Usage Guide
-1.Open the Streamlit App in your browser.
-2.Upload a Tax PDF (e.g., Form 16).
-3.Click "Process Document".
-4.Ask questions like:
-"What is the total taxable income?"
-"What was the registered office and leave travel allowances under section 10?"
-"What is the basic salary and HRA month for june-23?"
 
 
 
