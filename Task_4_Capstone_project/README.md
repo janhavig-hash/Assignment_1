@@ -11,7 +11,7 @@ A local, secure AI-powered assistant that analyzes Income Tax documents (Form 16
 * **🖥️ User-Friendly Interface:** **Streamlit** frontend for easy file uploads and chat interactions.
 * **✅ Robust Testing:** Includes a comprehensive test suite with **67%+ Code Coverage** (Pytest).
 
-* ## 🛠️ Tech Stack
+ ## 🛠️ Tech Stack
 
 * **Backend:** Python, FastAPI, Uvicorn
 * **Frontend:** Streamlit
@@ -42,6 +42,7 @@ tax-assistant-ai/
 * [Ollama](https://ollama.com/) installed and running (`ollama pull mistral`)
 
 
+```
 ```
  ### 1) Clone the Repository
  
