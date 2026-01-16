@@ -34,6 +34,56 @@ tax-assistant-ai/
 ├── frontend.py         # Streamlit User Interface
 ├── requirements.txt    # Project Dependencies
 └── README.md           # Documentation
+```
+---
+## 1.clone the reposistory 
+
+```
+linke:
+
+```
+---
+## 2. Create Virtual Environment
+```
+python -m venv venv
+# Windows:
+venv\Scripts\activate
+# Mac/Linux:
+source venv/bin/activate
+
+```
+---
+## 3. Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+---
+
+---
+## Terminal 1: Start Backend API   
+
+```
+uvicorn app.main:app --reload
+# API will start at [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+```
+---
+
+---
+## Terminal 2: Start Frontend UI
+
+```
+streamlit run frontend.py
+# UI will open at http://localhost:8501
+```
+---
+
+
+
+
+
+
 
 
 
