@@ -9,7 +9,7 @@ A local, secure AI-powered assistant that analyzes Income Tax documents (Form 16
 * **🔒 Local Privacy:** Runs entirely offline using **Ollama (Mistral)**, ensuring sensitive financial data never leaves the machine.
 * **⚡ Fast API:** Backend built with **FastAPI** for high-performance handling of requests.
 * **🖥️ User-Friendly Interface:** **Streamlit** frontend for easy file uploads and chat interactions.
-* **✅ Robust Testing:** Includes a comprehensive test suite with **67%+ Code Coverage** (Pytest).
+  
 
 ## 🛠️ Tech Stack
 
