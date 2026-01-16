@@ -39,7 +39,7 @@ tax-assistant-ai/
 ## 1.clone the reposistory 
 
 ```
-linke:
+(https://github.com/janhavig-hash/Training_Tasks/tree/main/Task_4_Capstone_project)
 
 ```
 ---
