@@ -4,7 +4,6 @@ import shutil
 from pathlib import Path
 
 from app.core.config import UPLOAD_DIR, MAX_FILE_SIZE_MB
-# We only need extract_text_from_pdf now (it handles chunking internally)
 from app.services.pdf_service import extract_text_from_pdf
 from app.services.embedding import embed_texts
 from app.services.vector_store import store_chunks, collection
@@ -101,4 +100,5 @@ def reset_database():
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to reset database: {str(e)}"
+
         )
