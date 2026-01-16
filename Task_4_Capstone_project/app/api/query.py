@@ -38,7 +38,7 @@ def query_docs(request: QueryRequest):
             or not results["documents"]
             or not results["documents"][0]
         ):
-            # Return a polite "I don't know" instead of a crash if DB is empty
+            
             return QueryResponse(
                 answer="I couldn't find any documents. Please upload a PDF first.",
                 citations=[]
@@ -98,4 +98,5 @@ def query_docs(request: QueryRequest):
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to process query: {str(e)}"
+
         )
