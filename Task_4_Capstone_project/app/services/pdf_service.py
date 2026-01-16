@@ -3,10 +3,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from typing import Union, BinaryIO
 
 def extract_text_from_pdf(file_input: Union[str, BinaryIO]) -> list[dict]:
-    """
-    Reads a PDF file (path or binary stream) and extracts text.
-    Returns a list of CHUNKS (not just pages).
-    """
+    
     reader = PdfReader(file_input)
     pages = []
 
@@ -21,10 +18,7 @@ def extract_text_from_pdf(file_input: Union[str, BinaryIO]) -> list[dict]:
     return chunk_text(pages)
 
 def chunk_text(pages: list[dict], chunk_size=500, overlap=50) -> list[dict]:
-    """
-    Splits page text into smaller overlapping chunks.
-    This function is now separate so it can be tested easily.
-    """
+   
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=chunk_size,
         chunk_overlap=overlap,
@@ -44,4 +38,5 @@ def chunk_text(pages: list[dict], chunk_size=500, overlap=50) -> list[dict]:
                 "page": page["page"]
             })
             
+
     return chunks
