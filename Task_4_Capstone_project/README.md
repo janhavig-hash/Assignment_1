@@ -8,8 +8,6 @@
 
 A local, secure AI-powered assistant that analyzes Income Tax documents (Form 16, Salary Slips, ITRs) and answers user queries with high accuracy. 
 
-Unlike standard RAG pipelines, this project implements **Multi-User Session Isolation** and **Encrypted PDF Handling**, making it suitable for real-world sensitive financial data.
-
 ---
 
 ## 🚀 Key Features
