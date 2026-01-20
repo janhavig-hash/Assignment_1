@@ -91,6 +91,22 @@ streamlit run frontend.py
 ```
 ---
 
+## 💡 Usage Guide
+
+# 1. Uploading Documents
+1. Open the web interface at http://localhost:8501.
+2.In the sidebar, look for the "Upload Tax Documents" section.
+3.Drag and drop your PDF files (e.g., Form 16, ITR, Salary Slips).
+4.Click **"Process Documents"**.
+      Note: If the document is password-protected, a password field will appear automatically.              Enter the password and click Retry.
+
+## 2. Asking Questions
+1.Once processing is complete, go to the Chat Interface in the main window.
+2.Type questions in natural language. Examples:
+"What is my total taxable income according to Form 16?"
+"List all the deductions claimed under Section 80C."
+"How much tax have I already paid?"
+The AI will retrieve relevant sections from your documents and provide a concise answer.
 
 
 
