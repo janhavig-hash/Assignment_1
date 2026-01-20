@@ -1,41 +1,55 @@
-# 🤖 AI Tax Assistant (RAG Pipeline)
+# 🤖 AI Tax Assistant (Secure Local RAG Pipeline)
 
-A local, secure AI-powered assistant that analyzes Income Tax documents (Form 16, Salary Slips) and answers user queries with high accuracy. Built using **Retrieval-Augmented Generation (RAG)** to ensure answers are grounded in the uploaded data, eliminating hallucinations.
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.128%2B-009688?logo=fastapi&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+![Test Coverage](https://img.shields.io/badge/Coverage-74%25-brightgreen)
+![Status](https://img.shields.io/badge/Status-Production--Ready-success)
 
-## 🚀 Features
+A local, secure AI-powered assistant that analyzes Income Tax documents (Form 16, Salary Slips, ITRs) and answers user queries with high accuracy. 
 
-* **📄 PDF Parsing:** Automatically extracts text and tables from complex PDF documents (Form 16, Investment Proofs).
-* **🧠 RAG Architecture:** Uses Vector Search (ChromaDB) to retrieve only the relevant chunks of data for the LLM.
-* **🔒 Local Privacy:** Runs entirely offline using **Ollama (Mistral)**, ensuring sensitive financial data never leaves the machine.
-* **⚡ Fast API:** Backend built with **FastAPI** for high-performance handling of requests.
-* **🖥️ User-Friendly Interface:** **Streamlit** frontend for easy file uploads and chat interactions.
-  
+Unlike standard RAG pipelines, this project implements **Multi-User Session Isolation** and **Encrypted PDF Handling**, making it suitable for real-world sensitive financial data.
+
+---
+
+## 🚀 Key Features
+
+* **🔐 Multi-User Session Isolation:** Uses metadata filtering (`session_id`) to ensure users can only query *their own* uploaded documents, preventing data leakage in shared environments.
+* **🔑 Encrypted PDF Support:** Automatically detects password-protected PDFs (e.g., Bank Statements) and prompts the user for credentials via the UI.
+* **🧠 Local & Secure AI:** Runs entirely offline using **Ollama (Mistral 7B)** and **Nomic Embeddings**, ensuring financial data never leaves the machine.
+* **⚡ Production-Ready Backend:** Built with **FastAPI** featuring strict Pydantic validation, CORS security, and centralized configuration management.
+* **📄 Advanced Parsing:** Uses `pypdf` with chunking strategies optimized for financial documents (500 chars / 50 overlap).
+
+---
 
 ## 🛠️ Tech Stack
 
-* **Backend:** Python, FastAPI, Uvicorn
+* **Backend:** Python, FastAPI, Uvicorn, Python-Multipart
 * **Frontend:** Streamlit
-* **AI & Search:** Ollama (Mistral), ChromaDB (Vector Store), Sentence-Transformers (Embeddings)
-* **PDF Processing:** PyPDF, LangChain Text Splitters
-* **Testing:** Pytest, Pytest-Cov
+* **AI & Embeddings:** Ollama (Mistral 7B), Nomic-Embed-Text
+* **Vector Database:** ChromaDB (Local Persistent Storage)
+* **Security:** Cryptography (AES Decryption), UUID Session Management
+* **Testing:** Pytest, Pytest-Cov, Pytest-HTML, HTTPX
+
+---
 
 ## 📂 Project Structure
 
 ```text
 tax-assistant-ai/
 ├── app/
-│   ├── api/            # Endpoints (Upload, Query)
-│   ├── core/           # Configuration & Logging
-│   ├── db/             # Database Connection (ChromaDB)
-│   ├── services/       # Business Logic (PDF, LLM, Embeddings)
+│   ├── api/            # Endpoints (upload.py, query.py)
+│   ├── core/           # Config (Settings, Logging)
+│   ├── services/       # Logic (pdf_service.py, vector_store.py, embedding.py)
 │   └── main.py         # App Entry Point
-├── data/               # Local storage for Uploads & DB
-├── tests/              # Unit and Integration Tests
+├── data/               # Local storage for Uploads & ChromaDB (Ignored by Git)
+├── tests/              # Pytest Unit & Integration Tests
 ├── frontend.py         # Streamlit User Interface
 ├── requirements.txt    # Project Dependencies
+├── .env.example        # Configuration Template
 └── README.md           # Documentation
-```
 ---
+```
 ## 1.clone the reposistory 
 
 ```
@@ -78,6 +92,9 @@ streamlit run frontend.py
 # UI will open at http://localhost:8501
 ```
 ---
+
+
+
 
 
 
